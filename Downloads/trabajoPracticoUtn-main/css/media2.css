@@ -1,0 +1,178 @@
+
+@media only screen and (max-width: 569px){
+nav ul li a{
+    padding: 10px 15px;
+    position: relative;
+    left: 14px;
+}
+}
+
+@media only screen and (max-width: 525px){
+    nav ul li a{
+        left: 0.2px;
+    }
+}
+
+@media only screen and (max-width: 512px){
+    nav ul li a{
+        margin-left: 0.6em;
+    }
+.h2Titulo{
+    margin-left:8em;
+    position: relative;
+    top: -150px;
+}
+
+    
+}
+@media only screen and (max-width: 512px) {
+    .claseMover {
+        transform: translateY(76px); 
+    }
+    .pInfo2 img{
+        position: relative;
+        top: 79px;
+
+    }
+    .pInfo3 img{
+        position: relative;
+        top: -20px;
+    }
+    .h2Titulo{
+        top: -110px
+    }
+
+
+    .imagenPresentacion{
+        position: relative;
+        top: 90px;
+    }
+
+
+}
+@media only screen and (max-width: 497px){
+nav ul li a{
+    padding:8px 12px;
+}
+
+}
+@media only screen and (max-width: 492px){
+   .h2Titulo{
+    padding: 8px 25px;
+    font-size: 14px;
+   }
+
+}
+
+@media only screen and (max-width: 478px){
+    nav ul li a{
+        padding: 8px 10px;
+    }
+    .h2Titulo{
+        font-size: 13px;
+    }
+    .redes ul{
+        justify-content: center;
+        
+            }
+            .redes ul li{
+                margin-top: 10px;
+        
+        
+            }
+          
+}
+
+@media only screen and (max-width: 467px){
+    nav ul li a{
+        padding: 6px 8px;
+    }
+
+    .h2Titulo{
+        padding:8px 25px ;
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width: 454px){
+    nav ul li a{
+        padding: 5px 5px;
+    }
+}
+@media only screen and (max-width: 437px){
+    nav ul li a{
+        padding: 4px 3px;
+        
+    }
+    
+}
+
+@media only screen and (max-width: 425px){
+    nav ul li a{
+        padding:3px 2px ;
+    }
+}
+
+@media only screen and (max-width: 419px){
+    nav ul li a{
+        padding: 4px 8px;
+        position: relative;
+        top:2em;
+    
+    }
+    
+        
+    }
+    nav ul li{
+        margin-bottom: 20px;
+    }
+
+
+@media only screen and (max-width: 419px){
+    .h2Titulo{
+        font-size: 13px;
+        padding: 7px 9px;
+    }
+    nav ul li a{
+        padding: 3px 3px;
+        font-size: 18px;
+    }
+}
+
+@media only screen and (max-width: 414px){
+    .h2Titulo{
+        padding: 6px 8px;
+    }
+}
+
+@media only screen and (max-width: 412px){
+    .h2Titulo{
+        padding: 5px 7px;
+    }
+}
+@media only screen and (max-width: 410px){
+    .h2Titulo{
+        padding: 4px 6px;
+        font-size: 11px;
+    }
+}
+@media only screen and (max-width: 405px){
+    nav ul{
+        display: flex;
+        flex-direction: column;
+    }
+    nav ul li a{
+        padding: 12px 25px;
+    }
+    .h2Titulo{
+        font-size: 11px;
+        padding: 4px 3px;
+    }
+}
+
+@media only screen and (max-width: 349px){
+    .h2Titulo{
+        padding: 3px 5px;
+        font-size: 10px;
+    }
+}

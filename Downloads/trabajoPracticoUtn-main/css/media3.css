@@ -1,0 +1,30 @@
+@media screen and (max-width: 488px) {
+    nav ul {
+      flex-direction: column;
+      align-items: flex-start; 
+    }
+    nav ul li{
+        display: flex;
+    }
+    .redes ul{
+justify-content: center;
+
+    }
+    .redes ul li{
+        margin-top: 10px;
+
+
+    }
+  
+   
+    }
+
+  @media screen and (max-width: 768px) {
+    nav ul {
+      justify-content: center;
+    }
+  
+    nav ul li {
+      margin: 10px;
+    }
+  }

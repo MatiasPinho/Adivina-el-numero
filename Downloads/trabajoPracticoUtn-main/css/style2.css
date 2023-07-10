@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Calibri, sans-serif;
+    background-image: url(../img/pink-and-purple-gradient-wallpaper-63439-65520-hd-wallpapers.jpg);
+    background-size: cover;
+}
+nav ul li a{
+    text-decoration: none;
+    margin-left: 15px;
+    color: white;
+    font-size: 19px;
+    background-color: #FF597B;
+    border-radius: 80px;
+    padding: 12px 25px;
+    
+}
+
+nav ul li{
+    display: inline-block;
+    margin-top: 29px;
+
+}
+
+nav ul li a.active{
+    font-weight: bold;
+    color: white;
+      background-color: #8CC0DE;
+  }
+
+.imagenPresentacion img{
+    width: 130px;
+    position: relative;
+    top: 37px;
+    margin-left: 12px;
+    display: inline;
+}
+.imagenPresentacion{
+    display: inline;
+    position: relative;
+    top: 98px;
+}
+
+.pInfo{
+    color: white;
+    margin-left: 146px;
+    position: relative;
+    top: -85px;
+    font-size: 20px;
+    font-family: Consolas, monospace;
+}
+
+.h2Titulo{
+    position: relative;
+    top: -120px;
+    color: white;
+    right: 25px;
+    background-color: red;
+    border-radius: 80px;
+    padding: 8px 5px;   
+    display: inline-block; 
+    
+}
+.pInfo2 p{
+    color: white;
+    margin-left: 156px;
+    position: relative;
+    top: -64px;
+    font-size: 20px;
+    font-family: Consolas, monospace;
+    }
+
+    .pInfo2{
+      position: relative;
+      top:-60px;       
+    }
+
+.pInfo3 p{
+    color: white;
+    margin-left: 156px;
+    position: relative;
+    top: -170px;
+    font-size: 20px;
+    font-family: Consolas, monospace;
+    
+}
+
+.pInfo3 img{
+        position: relative;
+        top:-74px;
+        margin-left: 10px;
+
+    }
+
+.redes ul li a{
+    text-decoration: none;
+    margin-left: 15px;
+    padding: 12px 25px;
+}
+.redes ul{
+    display: flex;
+
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-top: 50px;
+}
+.redes ul li{
+list-style: none;
+}
+
+.redes img{
+    width: 50px;
+}
+  
+
+nav ul li a:hover{
+    background-color: #8CC0DE; 
+    border-radius: 80px;}
