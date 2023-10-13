@@ -1,0 +1,170 @@
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 1%;
+  margin-top: 1%;
+}
+
+header p {
+  font-family: "Square Peg", cursive;
+  text-decoration: underline 2px #ff3a3a;
+  font-size: 1.6rem;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  height: 100vh;
+  justify-content: center;
+}
+
+.first-main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+
+.button-find-number {
+  display: flex;
+}
+
+.button-find-number h1 {
+  text-align: center;
+  font-size: 1.8rem;
+  padding: 1rem;
+  padding-top: 1.2rem;
+  padding-bottom: 1.2rem;
+  border-radius: 8px;
+  border: 0.19rem solid #ff3a3a;
+  letter-spacing: 0.7rem;
+}
+
+.range-insert-trys {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.range-insert-trys p {
+  letter-spacing: 1.5px;
+  text-align: center;
+}
+
+.first-strong {
+  color: #ff3a3a;
+}
+
+.two-strong {
+  color: #3eff3a;
+}
+
+.find {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#number {
+  border-radius: 8px;
+  border: 0.1rem solid #ff3a3a;
+  padding: 1.5rem;
+  background-color: transparent;
+}
+
+::-webkit-input-placeholder {
+  text-align: center;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+input[type="number"] {
+  color: rgb(255, 255, 255);
+  border-radius: 8px;
+  border: 0.1rem solid #ff3a3a;
+}
+
+input[type="number"]:focus {
+  outline: none;
+}
+#send {
+  margin: 0 auto;
+  padding: 1rem;
+  width: 10rem;
+  background-color: transparent;
+  border-radius: 8px;
+  border: 0.1rem solid #ff3a3a;
+}
+
+#send:hover {
+  cursor: pointer;
+  color: #3eff3a;
+}
+
+.trys-surrender-points {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+ul {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  list-style: none;
+}
+
+ul li {
+  font-size: 2rem;
+}
+
+.cross {
+  color: red;
+}
+
+.circle {
+  display: inline-block;
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 50%;
+  background-color: #3eff3a;
+}
+
+.surrender {
+  padding: 1rem;
+  width: 10rem;
+  background-color: transparent;
+  border-radius: 8px;
+  border: 0.1rem solid #ff3a3a;
+}
+
+.surrender:hover {
+  cursor: pointer;
+  color: #3eff3a;
+}
+
+.points {
+  color: #3eff3a;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Media querys */
+
+@media (0px <= width <= 600px) {
+  .button-find-number h1 {
+    letter-spacing: 0.1rem;
+  }
+}
