@@ -161,6 +161,73 @@ ul li {
   display: none;
 }
 
+.hiddenGame {
+  display: none;
+}
+
+.section-dificulty {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.3rem;
+}
+
+.special-strong {
+  color: #ffb03a;
+}
+
+.text-dificulty {
+  display: flex;
+  align-items: center;
+  gap: 1.3rem;
+}
+
+.button-dificulty-easy {
+  padding: 1rem;
+  width: 10rem;
+  background-color: transparent;
+  border-radius: 8px;
+  border: 0.1rem solid #ff3a3a;
+  margin-left: 5%;
+  cursor: pointer;
+}
+
+.button-dificulty-medium {
+  padding: 1rem;
+  width: 10rem;
+  background-color: transparent;
+  border-radius: 8px;
+  border: 0.1rem solid #ff3a3a;
+  margin-left: 5%;
+  cursor: pointer;
+}
+
+.button-dificulty-hard {
+  padding: 1rem;
+  width: 10rem;
+  background-color: transparent;
+  border-radius: 8px;
+  border: 0.1rem solid #ff3a3a;
+  margin-left: 5%;
+  cursor: pointer;
+}
+
+.button-dificulty-easy:hover {
+  color: #3eff3a;
+}
+
+.button-dificulty-medium:hover {
+  color: #ffb03a;
+}
+
+.button-dificulty-hard:hover {
+  color: #ff3a3a;
+}
+
+.section-dificulty.hiddenGame {
+  display: none;
+}
+
 /* Media querys */
 
 @media (0px <= width <= 600px) {

@@ -1,21 +1,55 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
-import "./App.css";
 import { Circle } from "./assets/Components/Circle";
 import { Cross } from "./assets/Components/Cross";
+import "./App.css";
 
 function App() {
   const [numberSent, setNumberSent] = useState(null);
-  const [numberRandom, setNumberRandom] = useState(
-    Math.floor(Math.random() * (50 - 0 + 1) + 0)
-  );
+  const [numberRandom, setNumberRandom] = useState(0);
+  const [dificulty, setDificulty] = useState(0);
   const [numberTrys, setNumberTrys] = useState(4);
-  const [inputValue, setInputValue] = useState("");
-  const [placeholderVisible, setPlaceholderVisible] = useState(true);
-  const { register, handleSubmit, resetField, reset } = useForm();
-console.log(numberRandom)
-console.log(numberTrys)
+  const [isHiddenGame, setIsHiddenGame] = useState(true);
+  const [isHiddenSelect, setIsHiddenSelect] = useState(false);
+  const [isWin, setIsWin] = useState(false);
+  const { register, handleSubmit, reset } = useForm();
+  console.log(numberRandom);
 
+  useEffect(() => {
+    setNumberRandom(generateRandomNumber(dificulty));
+  }, [dificulty]);
+
+  function generateRandomNumber(dificulty) {
+    switch (dificulty) {
+      case 1:
+        return Math.floor(Math.random() * (10 - 0 + 1) + 0);
+      case 2:
+        return Math.floor(Math.random() * (50 - 0 + 1) + 0);
+      case 3:
+        return Math.floor(Math.random() * (100 - 0 + 1) + 0);
+      default:
+        return Math.floor(Math.random() * (50 - 0 + 1) + 0);
+    }
+  }
+
+  function evaluarIntentos(data) {
+    if (numberTrys > 0) {
+      const newNumberSent = data.number;
+      setNumberSent(newNumberSent);
+      if (newNumberSent == numberRandom) {
+        setNumberTrys(numberTrys);
+      } else if (newNumberSent !== numberRandom) {
+        setNumberTrys(numberTrys - 1);
+      }
+      if (numberTrys === 0) {
+        setNumberRandom(generateRandomNumber(dificulty));
+        setNumberSent(0);
+        setNumberTrys(0);
+      }
+    }
+  }
+
+  console.log(isWin);
   return (
     <>
       <main>
@@ -34,16 +68,71 @@ console.log(numberTrys)
                   : ""
               }
             >
-              numero!
+              número!
             </strong>
           </h1>
         </article>
-        <article className="range-insert-trys">
+        <article
+          className={`section-dificulty ${
+            isHiddenSelect ? `hiddenGame ` : ""
+          } `}
+        >
+          <h3 className="dificulty-">Elije la dificultad</h3>
+          <span className="text-dificulty">
+            <button
+              onClick={() => {
+                setDificulty(1);
+                setIsHiddenGame(false);
+                setIsHiddenSelect(true);
+              }}
+              className="button-dificulty-easy"
+            >
+              Fácil
+            </button>{" "}
+            <p>
+              Entre <strong className="two-strong"> 0 y 10</strong>
+            </p>
+          </span>
+          <span className="text-dificulty">
+            <button
+              onClick={() => {
+                setDificulty(2);
+                setIsHiddenGame(false);
+                setIsHiddenSelect(true);
+              }}
+              className="button-dificulty-medium"
+            >
+              Medio
+            </button>{" "}
+            <p>
+              Entre <strong className="special-strong"> 0 y 50</strong>
+            </p>
+          </span>
+          <span className="text-dificulty ">
+            <button
+              onClick={() => {
+                setDificulty(3);
+                setIsHiddenGame(false);
+                setIsHiddenSelect(true);
+              }}
+              className="button-dificulty-hard"
+            >
+              Difícil
+            </button>{" "}
+            <p>
+              Entre <strong className="first-strong"> 0 y 100</strong>
+            </p>
+          </span>
+        </article>
+        <article
+          className={`range-insert-trys ${isHiddenGame ? `hiddenGame` : ""} `}
+        >
           <p>
             {numberSent == numberRandom ? (
               <span>
                 {" "}
-                <strong className="two-strong">FELICIDADES</strong>
+                <strong className="two-strong">FELICIDADES</strong>, el número
+                era {numberRandom}
               </span>
             ) : numberTrys == 0 ? (
               <span>
@@ -51,25 +140,52 @@ console.log(numberTrys)
                 Lo siento, has perdido,{" "}
                 <strong className="first-strong">
                   {" "}
-                  el numero era {numberRandom}
+                  el número era {numberRandom}
                 </strong>
               </span>
             ) : numberSent == null ? (
               <span>
                 <strong className="first-strong">Intenta</strong>, un número,
-                <strong className="two-strong"> entre 0 y 50 </strong>
+                entre{` `}
+                {dificulty === 1 ? (
+                  <strong className="two-strong">0 y 10</strong>
+                ) : dificulty === 2 ? (
+                  <strong className="special-strong">0 y 50</strong>
+                ) : (
+                  <strong className="first-strong">0 y 100</strong>
+                )}
               </span>
             ) : numberSent > numberRandom ? (
               <span>
                 {" "}
-                intenta un numero{" "}
-                <strong className="two-strong">mas pequeño</strong>
+                intenta un número{" "}
+                <strong
+                  className={
+                    dificulty == 1
+                      ? `two-strong`
+                      : dificulty == 2
+                      ? `special-strong`
+                      : `first-strong`
+                  }
+                >
+                  mas pequeño
+                </strong>
               </span>
             ) : numberSent < numberRandom ? (
               <span>
                 {" "}
-                intenta un numero{" "}
-                <strong className="two-strong">mas grande</strong>
+                intenta un número{" "}
+                <strong
+                  className={
+                    dificulty == 1
+                      ? `two-strong`
+                      : dificulty == 2
+                      ? `special-strong`
+                      : `first-strong`
+                  }
+                >
+                  mas grande
+                </strong>
               </span>
             ) : null}
           </p>
@@ -85,18 +201,8 @@ console.log(numberTrys)
           >
             <form
               onSubmit={handleSubmit((data) => {
-                setPlaceholderVisible(true);
-                setInputValue("");
-                numberTrys > 0
-                  ?  numberRandom == numberSent ? null :(setNumberTrys(numberTrys - 1), setNumberSent(data.number))
-                  : numberTrys === 0
-                  ? (setNumberRandom(
-                      Math.floor(Math.random() * (50 - 0 + 1) + 0)
-                    ),
-                    setNumberSent(null),
-                    setNumberTrys(0))
-                  : null;
-                  reset()
+                evaluarIntentos(data);
+                reset();
               })}
               className="find"
               action=""
@@ -106,37 +212,57 @@ console.log(numberTrys)
                 id="number"
                 {...register("number")}
                 name="number"
-                placeholder={placeholderVisible ? "Intenta un número..." : ""}
-                
+                placeholder="Intenta un número..."
                 required
                 inputMode="numeric"
               />
-              <input onClick={()=>{resetField()}} id="send" type="submit" value="Enviar" />
+              <input id="send" type="submit" value="Enviar" />
             </form>
           </div>
         </article>
         <article className="trys-surrender-points">
-        <ul>
-          {[0, 1, 2, 3].map((index) => (
-            <li key={index}>
-              {numberTrys < 4 - index ? <Cross /> : <Circle />}
+          <ul>
+            <li>
+              {numberTrys < 4 && numberRandom !== numberSent ? (
+                <Cross />
+              ) : (
+                <Circle />
+              )}
             </li>
-          ))  
-          }
-        </ul>
-          <button
-            onClick={() => {
-              setNumberRandom(Math.floor(Math.random() * (50 - 0 + 1) + 0));
-              setNumberTrys(4);
-              setNumberSent(null);
-              setPlaceholderVisible(true);
-              setInputValue("");
-              
-            }}
-            className="surrender"
-          >
-            Reiniciar
-          </button>
+            <li>
+              {numberTrys < 3 && numberRandom !== numberSent ? (
+                <Cross />
+              ) : (
+                <Circle />
+              )}
+            </li>
+            <li>
+              {numberTrys < 2 && numberRandom !== numberSent ? (
+                <Cross />
+              ) : (
+                <Circle />
+              )}
+            </li>
+            <li>
+              {numberTrys < 1 && numberRandom !== numberSent ? (
+                <Cross />
+              ) : (
+                <Circle />
+              )}
+            </li>
+          </ul>
+          <form>
+            <input
+              type="submit"
+              value="Reiniciar"
+              onClick={() => {
+                setNumberRandom(generateRandomNumber(dificulty));
+                setNumberTrys(4);
+                setNumberSent(null);
+              }}
+              className="surrender"
+            ></input>
+          </form>
         </article>
       </main>
     </>
