@@ -11,9 +11,8 @@ function App() {
   const [numberTrys, setNumberTrys] = useState(4);
   const [isHiddenGame, setIsHiddenGame] = useState(true);
   const [isHiddenSelect, setIsHiddenSelect] = useState(false);
-  const [isWin, setIsWin] = useState(false);
+
   const { register, handleSubmit, reset } = useForm();
-  console.log(numberRandom);
 
   useEffect(() => {
     setNumberRandom(generateRandomNumber(dificulty));
@@ -49,7 +48,6 @@ function App() {
     }
   }
 
-  console.log(isWin);
   return (
     <>
       <main>

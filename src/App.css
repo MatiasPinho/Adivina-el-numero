@@ -4,6 +4,7 @@ header {
   left: 0;
   margin-left: 1%;
   margin-top: 1%;
+  animation: fadeIn 1s ease-in-out; /* Aplicar la animación */
 }
 
 header p {
@@ -113,7 +114,7 @@ input[type="number"]:focus {
 .trys-surrender-points {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   gap: 1rem;
 }
 
@@ -227,8 +228,57 @@ ul li {
 .section-dificulty.hiddenGame {
   display: none;
 }
+#send .button-dificulty-easy,
+.button-dificulty-medium,
+.button-dificulty-hard,
+.surrender {
+  padding: 1rem;
+  width: 10rem;
+  background-color: transparent;
+  border-radius: 8px;
+  border: 0.1rem solid #ff3a3a;
+  margin-left: 5%;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+#send:hover {
+  background-color: #ff3a3a;
+  color: #fff;
+  transition: background-color 0.3s, color 0.3s;
+}
+.button-dificulty-easy:hover {
+  background-color: #3eff3a;
+  color: #fff;
+  transition: background-color 0.3s, color 0.3s;
+}
+.button-dificulty-medium:hover {
+  background-color: #ffb03a;
+  color: #fff;
+  transition: background-color 0.3s, color 0.3s;
+}
+.button-dificulty-hard:hover {
+  background-color: #ff3a3a;
+  color: #fff;
+  transition: background-color 0.3s, color 0.3s;
+}
+.surrender:hover {
+  background-color: #ff3a3a;
+  color: #fff;
+  transition: background-color 0.3s, color 0.3s;
+}
 
 /* Media querys */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 @media (0px <= width <= 600px) {
   .button-find-number h1 {
