@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap");
+
+/* Cambiar el color de la barra de desplazamiento */
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  color: #ecfdf6;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #1d1d20;
+}
+
+/* Cambiar el ancho y el color del scrollbar en navegadores WebKit (Chrome y Safari) */
+
+html {
+  scroll-behavior: smooth;
+}

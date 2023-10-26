@@ -1,0 +1,35 @@
+.about-me-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.about-me-icon {
+  width: 2rem;
+  height: 2rem;
+  fill: #38cfa4;
+}
+
+.aside-img-about-me {
+  text-align: center;
+  margin: 0 auto;
+  width: 80%;
+  height: 20rem;
+  border: 2px solid #38cfa4;
+}
+
+.paragraph-about-me {
+  text-align: center;
+  font-size: 1rem;
+  margin: 0 auto;
+  letter-spacing: 1px;
+  width: 60%;
+}
+
+.about-img {
+  width: 320px;
+  height: 320px;
+}

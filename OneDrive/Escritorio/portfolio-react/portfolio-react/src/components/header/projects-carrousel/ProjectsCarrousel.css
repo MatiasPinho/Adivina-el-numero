@@ -1,0 +1,98 @@
+.project-show-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.image-project {
+  width: 60%;
+  height: 20rem;
+  object-fit: cover;
+  border: 2px solid #38cfa4;
+}
+
+.tecnologys-projects-show {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+}
+
+.tecnology-show {
+  padding: 0.2rem;
+  border: 2px solid #71e4bf;
+}
+
+.buttons-project-show {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.button-project-web-show {
+  border-radius: 8px;
+  border: 1px solid #71e4bf;
+  width: 8rem;
+  height: 3rem;
+  background: #1d1d20;
+  letter-spacing: 1px;
+  font-size: 0.9rem;
+  color: #38cfa4;
+  cursor: pointer;
+}
+
+.button-project-github-show {
+  border-radius: 8px;
+  border: 1px solid #71e4bf;
+  width: 8rem;
+  height: 3rem;
+  background: #38cfa4;
+  color: #1d1d20;
+  letter-spacing: 1px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.description-project-show {
+  text-align: center;
+  width: 80%;
+}
+
+.button-previous-project {
+  width: 80px;
+  padding: 15px;
+  text-align: center;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #38cfa4;
+  cursor: pointer;
+}
+
+.button-previous-project:hover {
+  background-color: #38cfa4;
+}
+
+.button-next-project {
+  width: 80px;
+  padding: 15px;
+  text-align: center;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #38cfa4;
+  cursor: pointer;
+}
+
+.button-next-project:hover {
+  background-color: #38cfa4;
+}
+
+.projects-border-container {
+  display: flex;
+  align-items: center;
+}

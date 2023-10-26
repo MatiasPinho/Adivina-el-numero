@@ -1,0 +1,95 @@
+header {
+  position: fixed;
+  right: 0;
+  padding: 1rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.nav-mobile {
+  display: none;
+}
+
+.hamburger-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.cross-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+ul {
+  display: none;
+}
+
+.nav-destokp {
+  display: flex;
+}
+
+.ul-destokp {
+  padding: 0.8rem;
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  border-radius: 20px;
+  box-shadow: 0px 4px 4px 0px #38cfa4;
+  font-weight: bold;
+  margin-top: 5%;
+  background-color: #1d1d20;
+}
+
+.ul-destokp li:hover {
+  cursor: pointer;
+  text-decoration: underline #38cfa4;
+}
+
+.beta-advent {
+  position: fixed;
+  left: 0;
+  top: 0;
+
+  text-decoration: underline solid #38cfa4;
+}
+
+@media (0px <= width <= 768px) {
+  .nav-destokp {
+    display: none;
+  }
+
+  .nav-mobile {
+    display: flex;
+    justify-content: flex-end;
+    fill: #71e4bf;
+    cursor: pointer;
+  }
+
+  .nav-mobile {
+    display: flex;
+  }
+
+  .isActive {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    display: none;
+    padding: 2rem;
+    background-color: #1d1d20;
+    border: 2px solid #71e4bf;
+    gap: 1.5rem;
+    height: 50vh;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+    text-align: center;
+  }
+
+  .isActive {
+    display: flex;
+  }
+}
