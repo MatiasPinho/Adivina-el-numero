@@ -1,0 +1,122 @@
+---
+import Card from "../card/Card.astro";
+---
+
+<script></script>
+<div class="wave">
+  <svg
+    viewBox="0 0 500 150"
+    preserveAspectRatio="none"
+    style="height: 100%; width: 100%;"
+    ><path
+      d="M-0.90,-10.32 C-16.70,186.50 509.82,192.41 501.92,-12.29 L578.66,195.37 L-61.28,184.53 Z"
+      style="stroke: none; fill: #ffffff"></path></svg
+  >
+</div>
+<section class="about">
+  <section class="about__content">
+    <section class="about__card-container">
+      <Card />
+      <Card />
+      <Card />
+    </section>
+    <section class="about__info">
+      <img
+        class="about__info-img"
+        src="./provicional_about.png"
+        alt=""
+        width="540px"
+        height="540px"
+      />
+      <div class="about__info-texts">
+        <h2 class="about__info-title">Lorem Ipsum</h2>
+        <div class="about__info-paragraph-container">
+          <p class="about__info-paragraph">
+            Cada año, 800,000 niños se pierden en los Estados Unidos. Para los
+            padres, cada uno de esos 2,000 casos diarios es un temor hecho
+            realidad.
+          </p>
+          <p class="about__info-paragraph">
+            Nuestro programa no es solo una respuesta, es una necesidad, es el
+            reflejo del instinto más profundo para proteger lo más valioso y
+            vulnerable que tenemos, nuestros niños.
+          </p>
+          <p class="about__info-paragraph">
+            Únete a nosotros para convertir la preocupación en acción y
+            construir un escudo sólido para cada niño y familia.
+          </p>
+        </div>
+      </div>
+    </section>
+  </section>
+</section>
+
+<style>
+  .wave {
+    height: 80px;
+    position: relative;
+    top: -80px;
+    fill: white;
+    overflow: hidden;
+  }
+
+  .about {
+    min-height: 80px;
+  }
+
+  .about__content {
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+    padding-top: 175px;
+  }
+
+  .about__card-container {
+    position: absolute;
+    top: -145px;
+    left: 50%;
+    /* left: 50%; */
+    transform: translateX(-50%);
+    right: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    max-width: 301px;
+    margin: 0 auto;
+  }
+
+  .about__info {
+    display: flex;
+    flex-direction: column;
+    row-gap: 26px;
+  }
+
+  .about__info-img {
+    height: auto;
+    object-fit: cover;
+    width: 100%;
+    max-width: 540px;
+    margin: 0 auto;
+
+    border-radius: 10px;
+    box-shadow: -12px -15px 5px #ff5d4b;
+  }
+
+  .about__info-texts {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .about__info-title {
+    font-size: 2.3rem;
+    color: #ff5d4b;
+  }
+
+  .about__info-paragraph-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+</style>

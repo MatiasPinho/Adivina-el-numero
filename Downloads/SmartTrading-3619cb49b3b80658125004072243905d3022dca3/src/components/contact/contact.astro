@@ -1,0 +1,255 @@
+---
+import ArrowIcon from "../../icons/Arrow.astro";
+import Email from "../../icons/Email.astro";
+import LinkedIn from "../../icons/LinkedIn.astro";
+import Phone from "../../icons/Phone.astro";
+import emailjs from "@emailjs/browser";
+---
+
+<astro:script> </astro:script>
+
+<script></script>
+
+<section class="contact" id="contact-id">
+  <section class="contact__content content-width">
+    <div class="contact__texts content-separator">
+      <h4 class="contact__title title-secondary">
+        ¿Agente de bolsa o agente de cambio?
+      </h4>
+      <ArrowIcon />
+      <h5 class="contact__subtitle title-secondary">Contáctanos</h5>
+    </div>
+    <div class="contact__form">
+      <!--  <figure class="decoration__contact">
+        <img class="decoration__img" src="./picos4.png" alt="">
+      </figure> -->
+      <div class="contact__form__social">
+        <h5 class="contact__sub-subheading title-secondary">
+          Impulsemos juntos la transformación digital que <strong
+            >tu equipo</strong
+          > necesita.
+        </h5>
+        <ul class="contact__pils">
+          <li class="contact__link">
+            <a href=""> <LinkedIn /> </a>
+            <p class="paragraph">Nick linkedin</p>
+          </li>
+          <li class="contact__link">
+            <a href=""> <Email /> </a><p class="paragraph">
+              SmartTrading@gmail.com
+            </p>
+          </li>
+          <li class="contact__link">
+            <a href="">
+              <Phone />
+            </a>
+            <p class="paragraph">11-2345644</p>
+          </li>
+        </ul>
+      </div>
+      <form class="form" action="">
+        <label class="contact__label" for="name"
+          >Name <strong class="terciary-strong">*</strong></label
+        >
+        <input
+          class="contact__input"
+          type="text"
+          placeholder="Tu nombre"
+          id="name"
+          autocomplete="username"
+        />
+        <label class="contact__label" for="email"
+          >Email <strong class="terciary-strong">*</strong></label
+        >
+        <input
+          class="contact__input"
+          type="email"
+          placeholder="Tu email"
+          id="email"
+          autocomplete="email"
+        />
+        <label class="contact__label" for="message"
+          >Message <strong class="terciary-strong">*</strong></label
+        >
+        <textarea
+          class="contact__textarea"
+          name="message"
+          id="message"
+          placeholder="Tu mensaje"></textarea>
+        <input
+          class="contact__submit"
+          type="submit"
+          name="submit"
+          value="Enviar"
+        />
+      </form>
+    </div>
+  </section>
+</section>
+
+<style>
+  /* .contact__form {
+    position: relative;
+    z-index: 10;
+  }
+
+  .decoration__img {
+    width: 100%;
+  }
+
+  .decoration__contact {
+    z-index: -10;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+  } */
+
+  .contact__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 60px;
+  }
+
+  .contact__texts {
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .contact__title {
+    max-width: 14ch;
+  }
+
+  .contact__subtitle {
+    font-size: 2.25rem;
+  }
+
+  .contact__form {
+    display: flex;
+    flex-direction: column-reverse;
+    row-gap: 60px;
+    margin-bottom: 50px;
+    width: 100%;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 37px 16px;
+    border-radius: 24px;
+    background-image: var(--backgrund-footer);
+    color: var(--background);
+    box-shadow: var(--box-shadow-buttoms);
+  }
+
+  input {
+    transition: border-color 0.5s ease;
+    font-size: 1.125rem;
+  }
+
+  input:focus {
+    outline-color: var(--secondary);
+    border-color: var(--secondary);
+  }
+
+  textarea {
+    font-size: 1.25rem;
+  }
+
+  textarea:focus {
+    outline-color: var(--secondary);
+    border-color: var(--secondary);
+  }
+
+  .contact__label {
+    font-size: 1.125rem;
+  }
+
+  .contact__input {
+    padding: 18px 16px;
+    border: 2px solid var(--primary);
+    outline: none;
+    border-radius: 10px;
+  }
+
+  .contact__textarea {
+    height: 175px;
+    padding: 16px 10px;
+    border: 2px solid var(--primary);
+    border-radius: 10px;
+  }
+
+  .contact__submit {
+    width: 100%;
+    padding: 13px 25px;
+    background-image: var(--gradient-buttoms);
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    color: var(--background);
+    font-size: 1.125rem;
+  }
+
+  textarea::placeholder,
+  input::placeholder {
+    color: var(--disable);
+    font-size: 1rem;
+    font-family: "Poppins";
+  }
+
+  .contact__form__social {
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+  }
+
+  .contact__sub-subheading {
+    font-size: 2.25rem;
+    max-width: 15ch;
+  }
+
+  .contact__pils {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-left: 2px solid rgba(159, 71, 255, 0.33);
+    margin-left: 6px;
+    padding: 0 16px;
+  }
+
+  .contact__link {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  @media (min-width: 720px) {
+    .contact__form {
+      flex-direction: row;
+    }
+
+    .contact__form__social {
+      flex: 1;
+    }
+
+    .form {
+      width: 50%;
+      padding: 37px 35px;
+    }
+  }
+
+  @media (min-width: 1000px) {
+    .contact__title {
+      font-size: 2.5rem;
+    }
+
+    .contact__sub-subheading {
+      font-size: 2.5rem;
+    }
+  }
+</style>

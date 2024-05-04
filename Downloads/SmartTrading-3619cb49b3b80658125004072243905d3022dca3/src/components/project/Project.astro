@@ -1,0 +1,90 @@
+---
+import LinkButtons from "../buttons/LinkButtons.astro";
+---
+
+<script></script>
+
+<section class="project content-separator" id="project-id">
+  <!-- <figure class="decoration__project">
+    <img class="project__img" src="./picos3.png" alt="">
+  </figure> -->
+  <section class="project__content content-width">
+    <div class="project__texts">
+      <h3 class="project__title title-secondary">
+        Impulsamos la <strong class="alternative-strong">transformación</strong>
+        digital.
+      </h3>
+      <p class="project__paragraph paragraph">
+        Somos el puente entre los proveedores de sistemas líderes y los Agentes
+        de Bolsa. Nuestra solución personalizada para Agentes de Bolsa apoya su
+        crecimiento y adaptación, ofreciendo una plataforma escalable que
+        incorpora constantemente nuevas herramientas para una gestión eficiente
+        y efectiva.
+      </p>
+      <LinkButtons content="Ver proyecto" href="#" />
+    </div>
+    <img class="project__image" src="/dashboard_image.webp" alt="" />
+  </section>
+</section>
+
+<style>
+  .project {
+  }
+
+  /* .decoration__project {
+    z-index: -1;
+    position: absolute;
+    top: -150px;
+    left: 0;
+  }
+
+  .project__img {
+    width: 100%;
+  } */
+
+  .project__content {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+  }
+
+  .project__texts {
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+    align-items: flex-start;
+  }
+
+  .project__title {
+    max-width: 12ch;
+  }
+
+  .project__paragraph {
+    z-index: 3;
+    max-width: 40ch;
+    line-height: 1.8;
+  }
+
+  .project__image {
+    z-index: 3;
+    width: 100%;
+    object-fit: cover;
+    margin-left: -11px;
+    filter: drop-shadow(15px 15px 4px rgba(0, 0, 0, 0.5));
+  }
+
+  @media (min-width: 720px) {
+    .project__content {
+      flex-direction: row;
+      align-items: center;
+    }
+
+    .project__texts {
+      flex: 1;
+    }
+
+    .project__image {
+      width: 46%;
+    }
+  }
+</style>

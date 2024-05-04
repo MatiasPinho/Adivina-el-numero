@@ -1,0 +1,38 @@
+---
+const { content, href, alternative } = Astro.props;
+---
+
+<a
+  class={alternative ? "button--alternative" : "button"}
+  href={href}
+  role="link"
+  >{content}
+</a>
+
+<style>
+  .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 25px;
+    font-size: 1.125rem;
+    background-image: var(--gradient-buttoms);
+    outline: none;
+    border-radius: 26px;
+    color: var(--background);
+    box-shadow: var(--box-shadow-buttoms);
+  }
+
+  .button--alternative {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 25px;
+    font-size: 1.125rem;
+    background-color: transparent;
+    border: 2px solid var(--terciary);
+    outline: none;
+    border-radius: 26px;
+    color: var(--terciary);
+  }
+</style>

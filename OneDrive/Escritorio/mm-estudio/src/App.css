@@ -1,0 +1,64 @@
+/*fonts */
+@font-face{
+  font-family: "sk-modernist";
+  src: url("/fonts/sk-modernist/Sk-Modernist-Bold.woff2")
+
+}
+@font-face{
+  font-family: "sk-modernist";
+  src: url("/fonts/sk-modernist/Sk-Modernist-Mono.woff2")
+}
+
+@font-face{
+  font-family: "sk-modernist";
+  src: url("/fonts/sk-modernist/Sk-Modernist-Regular.woff2")
+}
+
+@font-face{
+  font-family: "gaia";
+  src: url("/fonts/gaia/gaia.woff2")
+}
+/*colors */
+:root{
+  /*blue */
+  --blue-100: rgba(65, 104, 142, 1);
+  --blue-80: rgba(65, 104, 142, 0.8);
+  --blue-60: rgba(65, 104, 142, 0.6);
+  --blue-40: rgba(65, 104, 142, 0.4);
+  --blue-20: rgba(65, 104, 142, 0.2);
+
+  /* white */
+  --white-100: rgba(248, 248, 248, 1);
+  --white-80: rgba(248, 248, 248, 0.8);
+  --white-60: rgba(248, 248, 248, 0.6);
+  --white-40: rgba(248, 248, 248, 0.4);
+  --white-20: rgba(248, 248, 248, 0.2);
+
+  /* grey */
+  --grey-100: rgba(126, 126, 126, 1);
+  --grey-80: rgba(126, 126, 126, 0.8);
+  --grey-60: rgba(126, 126, 126, 0.6);
+  --grey-40: rgba(126, 126, 126, 0.4);
+  --grey-20: rgba(126, 126, 126, 0.2);
+
+  /* black */
+  --black-100: rgba(29, 29, 29, 1);
+  --black-80: rgba(29, 29, 29, 0.8);
+  --black-60: rgba(29, 29, 29, 0.6);
+  --black-40: rgba(29, 29, 29, 0.4);
+  --black-20: rgba(29, 29, 29, 0.2);
+}
+
+/*reset-globals */
+*{
+  padding: 0;
+  margin: 0;
+}
+
+/*style-globals */
+
+html{
+  color-scheme: dark;
+}
+
+/*special exceptions */

@@ -1,0 +1,72 @@
+---
+const { logo, title, description, href } = Astro.props;
+import Dev from "../../icons/Dev.astro";
+import Maximize from "../../icons/Maximize.astro";
+import Test from "../../icons/Test.astro";
+---
+
+<script></script>
+
+<article class="services__card">
+  <div class="services__card__logo">
+    {
+      title === "Monitor de operaciones" ? (
+        <Dev />
+      ) : title === "Segmento Bilateral" ? (
+        <Maximize />
+      ) : title === "Automatizaciones" ? (
+        <Test />
+      ) : null
+    }
+  </div>
+  <h3 class="services__card__title title-terciary">{title}</h3>
+  <p class="services__card__paragraph paragraph-alternative">
+    {description}
+  </p>
+</article>
+
+<style>
+  .services__card {
+    background-image: var(--background-cards);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    gap: 16px;
+
+    padding: 70px 44px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: var(--box-shadow-buttoms);
+  }
+
+  .services__card__logo {
+    position: absolute;
+    top: -42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: var(--terciary);
+    box-shadow: var(--box-shadow-buttoms);
+  }
+
+  .services__card__title {
+    color: var(--secondary);
+    flex: 0.233333;
+  }
+
+  .services__card__paragraph {
+    color: var(--background);
+    font-weight: 500;
+    flex: 1;
+  }
+
+  .services__card__href {
+    color: var(--background);
+    text-decoration: underline;
+    font-weight: 500;
+  }
+</style>

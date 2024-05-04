@@ -1,0 +1,18 @@
+[
+  {
+    "title": "Monitor de operaciones",
+    "description": "Optimice la gestión de cartera con nuestro monitor de operaciones, diseñado para proporcionar una visualización en tiempo real de sus activos y los de sus clientes. Nuestra plataforma permite a los operadores ejecutar decisiones precisas y rápidas, asegurando una actuación eficaz frente a las exigencias del mercado.",
+    "logo": "./",
+    "href": "#"
+  },
+  {
+    "title": "Segmento Bilateral",
+    "description": "Nuestro innovador sistema para la gestión de operaciones bilaterales transforma la complejidad en simplicidad. A través de nuestra plataforma garantizamos una registración precisa y rápida, brindando a los usuarios transparencia total sobre el estado y las novedades de estas operaciones.",
+    "href": "#"
+  },
+  {
+    "title": "Automatizaciones",
+    "description": "Facilitamos la transformación digital a través de soluciones avanzadas en automatización de procesos, diseñadas para atacar puntos de dolor específicos de la administración cotidiana de un agente. Desde conciliaciones automatizadas hasta herramientas de distribución de cauciones, nuestras soluciones están pensadas para simplificar la gestión diaria.",
+    "href": "#"
+  }
+]

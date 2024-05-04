@@ -1,0 +1,150 @@
+---
+import LinkButtons from "../buttons/LinkButtons.astro";
+---
+
+<script></script>
+
+<section class="hero">
+  <!-- <figure class="decoration__top">
+    <img class="decoration__img" src="./picos.png" alt="">
+  </figure> -->
+  <section class="hero__content content-width">
+    <div class="hero__information">
+      <h1 class="hero__title title">SMART <strong>TRADING</strong></h1>
+      <p class="hero__pararagraph paragraph">
+        Con Smart Trading, descubrí el punto de encuentro entre mercados y
+        tecnología. Nos especializamos en elevar la productividad de los agentes
+        de bolsa a través de soluciones digitales que conectan usuarios con
+        sistemas.
+      </p>
+      <div class="hero__buttons">
+        <LinkButtons
+          content="Leer más"
+          href="#project-id"
+          alternative={false}
+        />
+        <LinkButtons content="Contacto" href="#contact-id" alternative={true} />
+      </div>
+    </div>
+    <img class="hero__image" src="/hero_image.webp" alt="" />
+  </section>
+  <!-- <figure class="decoration__right">
+    <img class="decoration__img" src="./picos2.png" alt="">
+  </figure> -->
+</section>
+
+<style>
+  .hero {
+    /* position: relative; */
+    padding-bottom: 50px 0;
+    /*   display: flex;
+    flex-direction: column;
+    justify-content: center;
+     */
+    /* background-image: url("./picos.png");
+    background-repeat: no-repeat;
+    background-size: cover; */
+  }
+
+  /* .decoration__top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  .decoration__img {
+    width: 100%;
+  } */
+
+  .decoration__right {
+    position: absolute;
+    top: 200px;
+    left: 0;
+    width: 100%;
+  }
+
+  .hero__content {
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    gap: 60px;
+    padding-top: 225px;
+  }
+
+  .hero__title {
+    position: relative;
+  }
+
+  .hero__title::before {
+    content: "";
+    position: absolute;
+    top: -19px;
+    left: 7px;
+    width: 103px;
+    border-radius: 20px;
+    height: 4.5px;
+    background-color: var(--terciary);
+  }
+
+  .hero__information {
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+    flex-grow: 1;
+  }
+
+  .hero__pararagraph {
+    max-width: 40ch;
+  }
+
+  .hero__buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .hero__image {
+    object-fit: cover;
+    width: 100%;
+    filter: drop-shadow(15px 15px 4px rgba(0, 0, 0, 0.5));
+  }
+
+  @media (min-width: 720px) {
+    .hero {
+      min-height: 80vh;
+    }
+
+    .hero__content {
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hero__pararagraph {
+      max-width: 41ch;
+    }
+
+    .hero__image {
+      width: 46%;
+
+      object-position: left;
+    }
+  }
+
+  @media (min-width: 1000px) {
+    .hero__title {
+      max-width: 7ch;
+    }
+  }
+
+  @media (min-width: 1400px) {
+    .hero__title {
+    }
+
+    .hero__image {
+      width: 50%;
+    }
+  }
+</style>

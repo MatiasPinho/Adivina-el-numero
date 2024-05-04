@@ -1,0 +1,104 @@
+---
+import CardData from "../../../data/cardData.json";
+import Card from "../card/Card.astro";
+---
+
+<script></script>
+
+<section class="services content-separator" id="services-id">
+  <figure class="services__pict">
+    <img class="services__img" src="./decoration_two.webp" alt="" />
+  </figure>
+  <section class="services__content content-width">
+    <div class="services__texts">
+      <h2 class="services__texts__title title-secondary">
+        Conectamos <strong>tecnologías</strong> con procesos.
+      </h2>
+      <p class="services__texts__paragraph paragraph">
+        Nuestro objetivo es facilitar una integración de la tecnología
+        disponible en el mercado con los procesos operativos de los agentes de
+        bolsa, reduciendo significativamente el esfuerzo manual entre
+        colaboradores y mitigando riesgos operativos.
+      </p>
+    </div>
+
+    <section class="services__cards">
+      {
+        CardData.map((card) => (
+          <Card
+            title={card.title}
+            description={card.description}
+            href={card.href}
+          />
+        ))
+      }
+    </section>
+  </section>
+</section>
+
+<style>
+  .services {
+    position: relative;
+  }
+
+  .services__pict {
+    position: absolute;
+    top: -350;
+
+    background-repeat: no-repeat;
+  }
+
+  .services__img {
+    width: 100%;
+  }
+
+  .services__content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 90px;
+  }
+
+  .services__texts {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+  }
+
+  .services__texts__title {
+    position: relative;
+  }
+
+  .services__texts__paragraph {
+    max-width: 70ch;
+  }
+
+  strong::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 20px;
+    left: 0;
+    bottom: 12%;
+    z-index: -1;
+    background-color: #5be9ba;
+  }
+
+  .services__cards {
+    display: flex;
+    flex-direction: column;
+    row-gap: 72px;
+  }
+
+  @media (min-width: 1200px) {
+    .services__content {
+      row-gap: 70px;
+      align-items: flex-start;
+    }
+
+    .services__cards {
+      flex-direction: row;
+      column-gap: 36px;
+      max-width: 100%;
+    }
+  }
+</style>
