@@ -1,0 +1,18 @@
+.button-link{
+display: flex;
+align-items: center;
+gap: 16px;
+padding: 0.9rem 1.2rem;
+background-color: var(--blue-100);
+font-size: 1.163rem; 
+border-bottom-left-radius: 19px;
+}
+
+.button-link svg{
+    transition: 0.3s transform ease-in-out;
+}
+
+.button-link:hover svg{
+transform: rotate(-90deg)
+
+}

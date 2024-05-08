@@ -1,25 +1,24 @@
 /*fonts */
-@font-face{
-  font-family: "sk-modernist";
-  src: url("/fonts/sk-modernist/Sk-Modernist-Bold.woff2")
-
+@font-face {
+  font-family: "sk-modernist-bold";
+  src: url("/fonts/sk-modernist/Sk-Modernist-Bold.woff2");
 }
-@font-face{
+@font-face {
   font-family: "sk-modernist";
-  src: url("/fonts/sk-modernist/Sk-Modernist-Mono.woff2")
-}
-
-@font-face{
-  font-family: "sk-modernist";
-  src: url("/fonts/sk-modernist/Sk-Modernist-Regular.woff2")
+  src: url("/fonts/sk-modernist/Sk-Modernist-Mono.woff2");
 }
 
-@font-face{
+@font-face {
+  font-family: "sk-modernist";
+  src: url("/fonts/sk-modernist/Sk-Modernist-Regular.woff2");
+}
+
+@font-face {
   font-family: "gaia";
-  src: url("/fonts/gaia/gaia.woff2")
+  src: url("/fonts/gaia/gaia.woff2");
 }
 /*colors */
-:root{
+:root {
   /*blue */
   --blue-100: rgba(65, 104, 142, 1);
   --blue-80: rgba(65, 104, 142, 0.8);
@@ -50,15 +49,40 @@
 }
 
 /*reset-globals */
-*{
+* {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: currentColor;
+  text-decoration: none;
 }
 
 /*style-globals */
 
-html{
+body {
+  background-color: var(--black-100);
+}
+
+html {
   color-scheme: dark;
+}
+
+a,
+p,
+h2,
+h3,
+h4,
+h5,
+h6,
+span {
+  font-family: "sk-modernist";
 }
 
 /*special exceptions */

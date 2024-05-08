@@ -1,7 +1,7 @@
 export const LogoMmMobile = () => {
   return (
     <svg
-      className="logo__mobile"
+      className="header__logo--mobile"
       width="74"
       height="62"
       viewBox="0 0 74 62"
