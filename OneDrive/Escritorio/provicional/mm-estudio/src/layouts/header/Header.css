@@ -1,0 +1,140 @@
+.header {
+  position: fixed;
+  height: 120px;
+  width: 100%;
+  z-index: 30;
+}
+
+.header__nav-social {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 90rem;
+  padding: 0 2rem;
+  margin: 0 auto;
+  height: 100%;
+  width: 100%;
+}
+
+.header__logo--destokp {
+  width: 300px;
+  object-fit: contain;
+  opacity: 100;
+  transition: 0.3s opacity ease-in-out;
+}
+
+.header__logo--destokp--disable {
+  opacity: 0;
+}
+
+.menu {
+  display: none;
+  position: relative;
+  width: 40px;
+  cursor: pointer;
+  z-index: 30;
+}
+
+.menu__item {
+  width: 100%;
+  height: 3px;
+  margin: 10px 0;
+  border-radius: 20px;
+  background-color: white;
+  transition: transform 0.9s;
+}
+
+.menu.menu--open .menu__item:nth-child(1) {
+  transform: rotate(-45deg) translate(-1px, -2px);
+}
+
+.menu.menu--open .menu__item:nth-child(2) {
+  transform: rotate(44deg) translate(-11px, -8px);
+}
+
+.menu.menu--open .menu__item:nth-child(3) {
+  opacity: 0;
+}
+
+.header__logo--mobile {
+  display: none;
+}
+
+.header__navs {
+  display: flex;
+  padding: 0.6rem 2rem;
+  align-items: center;
+  column-gap: 62px;
+  transition:
+    bottom 0.5s ease-in-out,
+    background-color 0.5s ease-in-out;
+  border-radius: 15px;
+}
+
+.header__navs--transparent {
+  background-color: #252525cc;
+}
+
+.header__nav {
+  display: flex;
+  column-gap: 62px;
+}
+
+.header__nav-link {
+  transition: 0.3s color ease-in-out;
+}
+
+.header__nav-link--active {
+  color: var(--grey-100);
+}
+
+/* Hover provicional */
+.header__nav-link:hover {
+  color: var(--grey-100);
+}
+
+.header__social {
+  display: flex;
+  gap: 16px;
+  height: 29px;
+}
+
+@media (max-width: 1000px) {
+  .header__logo--destokp {
+    display: none;
+  }
+
+  .header__logo--mobile {
+    display: block;
+  }
+
+  .header__navs {
+    position: fixed;
+    bottom: -103%;
+    right: 0;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 35px;
+    text-align: center;
+    height: 105%;
+    width: 100%;
+    background-color: #00000091;
+  }
+
+  .header__navs--open {
+    bottom: -10px;
+  }
+
+  .header__nav {
+    flex-direction: column;
+    gap: 22px;
+  }
+
+  .header__nav-link {
+    font-size: 2rem;
+  }
+
+  .menu {
+    display: block;
+  }
+}

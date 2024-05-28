@@ -1,0 +1,263 @@
+.card {
+  min-height: 100vh;
+  height: 824px;
+  width: 0;
+  flex-grow: 1;
+  position: relative;
+  cursor: pointer;
+  transition: width 0.55s ease-out;
+  overflow: hidden;
+}
+
+.card--expanded {
+  width: 100%;
+  transition: width 0.55s ease-out;
+  min-height: 100vh;
+}
+
+.card__visible {
+  position: relative;
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+  max-width: 90rem;
+  padding: 106px 2rem 0;
+  margin: 0 auto;
+}
+
+.card__title {
+  position: relative;
+  font-size: 2.7rem;
+  max-width: 17ch;
+}
+
+.circle__arrow {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  display: flex;
+  gap: 32px;
+  right: 48px;
+  bottom: 442px;
+  z-index: 10;
+}
+
+.circle__arrow--two {
+  display: flex;
+  align-items: center;
+  align-self: flex-end;
+  display: flex;
+  gap: 32px;
+  right: 0;
+  bottom: -70px;
+  z-index: 10;
+}
+
+.circle__arrow__title {
+  display: flex;
+  opacity: 100%;
+  transition: 0.5s opacity ease-in-out;
+}
+
+.circle__arrow__container {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 3px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+}
+
+.circle__arrow__icon {
+  transition: 0.5s transform ease-in-out;
+}
+
+.circle__arrow__icon--rotate {
+  transform: rotate(180deg);
+}
+
+.card__title:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -126px;
+  width: 1px;
+  height: 115px;
+  background-color: var(--white-100);
+  transition: 0.5s ease;
+}
+
+.card__visible:after {
+  content: "info +";
+  transform-origin: bottom left;
+  position: absolute;
+  left: 31px;
+  bottom: 159px;
+  transform: rotate(90deg);
+  font-size: 1rem;
+  letter-spacing: 3.5px;
+  font-weight: 400;
+  font-family: "sk-modernist-bold";
+}
+
+.card__title.opacity:before {
+  opacity: 0;
+}
+
+.card__right__content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-self: center;
+  /* padding-top: 113px; */
+  /* padding-top: 139px; */
+  opacity: 0;
+  display: none;
+  transition: 1.3s opacity ease-in-out;
+  z-index: 10;
+}
+
+.card__right__content--open {
+  display: flex;
+  opacity: 100%;
+  transition: 1.3s opacity ease-in-out;
+}
+
+.text__right {
+  font-size: 2rem;
+  font-weight: bold;
+  max-width: 27ch;
+}
+
+.text__opacity {
+  position: absolute;
+  top: -132px;
+  left: -160px;
+  font-size: 9rem;
+  color: rgb(126 126 126 / 18%);
+  font-weight: bold;
+  user-select: none;
+}
+
+.text__paragraphs {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+}
+
+.text__paragraph {
+  color: rgb(159 159 159);
+  max-width: 68ch;
+  z-index: 10;
+}
+
+.card__line--disable {
+  opacity: 0;
+}
+
+.card__img {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(100%);
+}
+
+.card__img--filter {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0000006b;
+}
+
+.card:hover .card__img {
+  filter: grayscale(0%);
+}
+
+.card--color {
+  filter: grayscale(0%);
+}
+
+@media (max-width: 1500px) {
+  .text__opacity {
+    font-size: 7.5rem;
+  }
+
+  .card__visible {
+    padding: 100px 2rem 0;
+    padding-bottom: 5rem;
+  }
+
+  .card__line {
+    height: 101px;
+  }
+
+  .circle__arrow {
+    bottom: 151px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .cards__container {
+    min-height: auto;
+  }
+
+  .card {
+    width: 100%;
+    min-height: 320px;
+    max-height: 320px;
+    height: auto;
+    transition: 0.55s ease;
+  }
+
+  .card__visible {
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 50px 0;
+    gap: 4rem;
+    max-width: 95%;
+  }
+
+  .card__right__content {
+    padding-top: 0;
+  }
+
+  .card__title {
+    font-size: 2.4rem;
+  }
+
+  .card__line {
+    display: none;
+  }
+
+  .text__opacity {
+    left: 0;
+  }
+
+  .circle__arrow {
+    bottom: 16px;
+  }
+
+  .card__visible:after {
+    display: none;
+  }
+
+  .card--expanded {
+    max-height: 1500px;
+    min-height: 560px;
+    height: auto;
+    transition: 1.55s;
+  }
+}
+
+@media (max-width: 720px) {
+  .text__opacity {
+    display: none;
+  }
+}
